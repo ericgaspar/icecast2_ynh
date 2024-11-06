@@ -4,7 +4,7 @@ packaging_format = 2
 
 id = "icecast2"
 name = "Icecast2"
-description.en = "Explain in *a few (10~15) words* the purpose of the app or what it actually does (it is meant to give a rough idea to users browsing a catalog of 100+ apps)"
+description.en = "server for streaming multimedia"
 description.fr = "Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)"
 
 version = "2.4.4~ynh1"
@@ -13,9 +13,9 @@ maintainers = ["eric-G"]
 
 [upstream]
 license = "free"
-website = "https://example.com"
+website = "https://icecast.org/"
 demo = "https://demo.example.com"
-admindoc = "https://yunohost.org/packaging_apps"
+admindoc = "https://icecast.org/docs/"
 userdoc = "https://yunohost.org/apps"
 code = "https://some.forge.com/example/example"
 
