@@ -11,23 +11,14 @@ ynh_script_progression "Stopping $app's systemd service..."
 ynh_systemctl --service="$app" --action="stop"
 
 #=================================================
-# DOWNLOAD, CHECK AND UNPACK SOURCE
-#=================================================
-ynh_script_progression "Upgrading source files..."
-
-ynh_setup_source --dest_dir="$install_dir" --full_replace --keep=".env data"
-
-chown -R "$app:www-data" "$install_dir"
-
-#=================================================
 # UPDATE A CONFIG FILE
 #=================================================
 ynh_script_progression "Updating $app's configuration files..."
 
-ynh_config_add --template="some_config_file" --destination="$install_dir/some_config_file"
+ynh_config_add --template="icecast.xml" --destination="/etc/icecast2/icecast.xml"
 
-chmod 400 "$install_dir/some_config_file"
-chown "$app:$app" "$install_dir/some_config_file"
+chmod 400 "/etc/icecast2/icecast.xml"
+chown "$app:$app" "/etc/icecast2/icecast.xml"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
