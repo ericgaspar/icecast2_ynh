@@ -8,7 +8,7 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Setting up source files..."
 
-mkdir /var/log/$app
+#mkdir /var/log/$app
 chown $app: /var/log/$app
 
 #=================================================
